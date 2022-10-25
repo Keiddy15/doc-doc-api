@@ -26,4 +26,28 @@ export default {
       };
     }
   },
+  editUser: async (data) => {
+    try {
+      const user = await UserModel.update(data, {where: {email: data.email}});
+      return true
+    } catch (error) {
+      console.error("An error occurred while updating the user", error);
+      return {
+        error: true,
+        message: error,
+      };
+    }
+  },
+  getAllUsers: async (email) => {
+    try {
+      const users = await UserModel.findAll();
+      return users;
+    } catch (error) {
+      console.error("An error occurred while getting all users", error);
+      return {
+        error: true,
+        message: error,
+      };
+    }
+  },
 };

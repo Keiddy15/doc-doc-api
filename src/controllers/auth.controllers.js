@@ -37,7 +37,7 @@ export default {
             return res.status(500).json(error)
         }
     },
-    signUp: async (req, res) => {
+    register: async (req, res) => {
         try {
             let user = {
                 ...req.body,
