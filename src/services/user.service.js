@@ -38,7 +38,7 @@ export default {
       };
     }
   },
-  getAllUsers: async (email) => {
+  getAllUsers: async () => {
     try {
       const users = await UserModel.findAll();
       return users;
