@@ -4,6 +4,8 @@ import Config from "./config.js";
 import bodyParser from 'body-parser'
 import morgan from "morgan";
 
+console.log(Config)
+
 //Init express
 const app = express();
 
