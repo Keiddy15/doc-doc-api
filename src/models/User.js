@@ -27,7 +27,8 @@ export const User = sequelize.define(
     },
     photoUrl: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
+      defaultValue: ""
     },
     status: {
       type: DataTypes.BOOLEAN,
